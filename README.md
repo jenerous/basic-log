@@ -19,5 +19,5 @@ chmod 750 /usr/bin/log
 hit log and what ever you want to remember to the commandline
 
 ```bash
-log Oh that's important. I should write it down!
+log "Oh that's important. I should write it down!"
 ```
