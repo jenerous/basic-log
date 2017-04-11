@@ -15,10 +15,11 @@ def main(args):
     if not os.path.isdir:
         os.mkdir(log_dir)
 
+    now         = localtime()
+    log_file    = os.path.join(log_dir, '{}.log'.format(strftime('%Y-%m-%d', now)))
+
     if args:
-        now          = localtime()
         time_string  = strftime('%H:%M:%S', now)
-        log_file     = os.path.join(log_dir, '{}.log'.format(strftime('%Y-%m-%d', now)))
         out_text     = ''
         time_prefix  = '[{}]'.format(time_string)
         current_line = time_prefix
