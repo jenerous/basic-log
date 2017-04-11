@@ -11,7 +11,7 @@ log_dir     = '/place/to/store/logs/in'  # log directory
 copy log.py to a system bin folder and make it executeable
 ```bash
 cd basic-log
-cp log.py /usr/bin/log
+cp log.py /usr/bin/log  # just an example directory!
 chmod 750 /usr/bin/log
 ```
 
