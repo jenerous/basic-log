@@ -8,8 +8,12 @@ import os
 
 def main(args):
 
-    line_length = 80
-    log_dir     = '.'
+    line_length = 80   # max number of symbols to write in each line
+    log_dir     = '.'  # log directory
+    
+    # create log directory
+    if not os.path.isdir:
+        os.mkdir(log_dir)
 
     if args:
         now          = localtime()
@@ -19,9 +23,11 @@ def main(args):
         time_prefix  = '[{}]'.format(time_string)
         current_line = time_prefix
 
+        # create a file for each day
         if not os.path.isfile(log_file):
             out_text = '{:=^{l_len}}\n'.format(' ' + strftime('%Y-%m-%d', now) + ' ', l_len=line_length - 2)
 
+        # split text into lines depending on line_length
         for i, a in enumerate(args):
             if len(current_line) + len(a) + 1 > line_length:
                 out_text += current_line + '\n'
@@ -30,9 +36,11 @@ def main(args):
 
         out_text += current_line + '\n'
 
+        # write text to logfile
         with open(log_file, 'a') as log_out:
             log_out.write(out_text)
 
+    # show the last 5 entries in the current log file
     if os.path.isfile(log_file):
         os.system('tail -n 5 {}'.format(log_file))
 
