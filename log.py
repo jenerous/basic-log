@@ -10,15 +10,18 @@ def main(args):
 
     line_length = 80   # max number of symbols to write in each line
     log_dir     = '.'  # log directory
-    
+
     # create log directory
     if not os.path.isdir:
         os.mkdir(log_dir)
-
     now         = localtime()
     log_file    = os.path.join(log_dir, '{}.log'.format(strftime('%Y-%m-%d', now)))
 
     if args:
+        # split args into words if it was passed with quotes
+        if len(args) == 1:
+            args = args[0].split(' ')
+
         time_string  = strftime('%H:%M:%S', now)
         out_text     = ''
         time_prefix  = '[{}]'.format(time_string)
@@ -48,3 +51,4 @@ def main(args):
 
 if __name__ == '__main__':
     main(sys.argv[1:])
+
