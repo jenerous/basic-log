@@ -23,7 +23,7 @@ hit log and what ever you want to remember to the commandline
 log "Oh that's important. I should write it down!"
 ```
 ## Preview
-```bash
+```
 Log of today:
 ================================= 2017-04-12 =================================
 [10:22:16] Oh that's important. I should write it down!
