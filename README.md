@@ -1,20 +1,32 @@
 # basic-log
 quickly log a thought 
 
-## Install
-adapt log.py to your needs with a text editor of your choice
+## Install (command line)
+Clone repo.
+```bash
+git clone https://github.com/jhertfe/basic-log.git
+cd basic-log
+```
+
+Adapt log.py to your needs with a text editor of your choice
 ```python
 line_length = 80                         # max number of symbols to write in each line
 log_dir     = '/place/to/store/logs/in'  # log directory
 show_lines  = 5                          # last x lines to show
 ```
 
-copy log.py to a system bin folder and make it executeable
+copy log.py to a folder which is in PATH variable and make it executeable
 ```bash
-cd basic-log
-cp log.py /usr/bin/log  # just an example directory!
-chmod 750 /usr/bin/log
+cp log.py $HOME/bin/log  # just an example directory!
+chmod 750 $HOME/bin/log
 ```
+**Hint PATH**
+
+PATH variable can be shown by
+```bash
+echo $PATH
+```
+
 
 ## Usage
 hit log and what ever you want to remember to the commandline
