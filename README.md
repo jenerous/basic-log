@@ -6,6 +6,7 @@ adapt log.py to your needs with a text editor of your choice
 ```python
 line_length = 80                         # max number of symbols to write in each line
 log_dir     = '/place/to/store/logs/in'  # log directory
+show_lines  = 5                          # last x lines to show
 ```
 
 copy log.py to a system bin folder and make it executeable
