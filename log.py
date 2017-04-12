@@ -21,7 +21,7 @@ def main(args):
     show_lines  = 5    # last x lines to show
 
     # create log directory
-    if not os.path.isdir:
+    if not os.path.isdir(log_dir):
         os.mkdir(log_dir)
     now         = localtime()
     log_file    = os.path.join(log_dir, '{}.log'.format(strftime('%Y-%m-%d', now)))
